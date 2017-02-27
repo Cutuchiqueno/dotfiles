@@ -1,0 +1,109 @@
+# Configuration file for the color ls utility
+# This file goes in the /etc directory, and must be world readable.
+# You can copy this file to .dir_colors in your $HOME directory to override
+# the system defaults.
+
+# COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
+# pipes. 'all' adds color characters to all output. 'none' shuts colorization
+# off.
+COLOR all
+
+# Extra command line options for ls go here.
+# Basically these ones are:
+#  -F = show '/' for dirs, '*' for executables, etc.
+#  -T 0 = don't trust tab spacing when formatting ls output.
+OPTIONS -F -T 0
+
+# Below, there should be one TERM entry for each termtype that is colorizable
+TERM xterm-termite
+TERM linux
+TERM console
+TERM con132x25
+TERM con132x30
+TERM con132x43
+TERM con132x60
+TERM con80x25
+TERM con80x28
+TERM con80x30
+TERM con80x43
+TERM con80x50
+TERM con80x60
+TERM xterm
+TERM xterm-color
+TERM vt100
+TERM rxvt
+TERM rxvt-256color
+TERM rxvt-cygwin
+TERM rxvt-cygwin-native
+TERM rxvt-unicode
+TERM rxvt-unicode-256color
+TERM rxvt-unicode256
+TERM screen
+
+# EIGHTBIT, followed by '1' for on, '0' for off. (8-bit output)
+EIGHTBIT 1
+
+# Below are the color init strings for the basic file types. A color init
+# string consists of one or more of the following numeric codes:
+# Attribute codes: 
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Background color codes:
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+NORMAL 00	# global default, although everything should be something.
+FILE 02;37 	# normal file
+DIR 01;40;34 	# directory
+LINK 03 	# symbolic link
+FIFO 40;33	# pipe
+SOCK 01;35	# socket
+BLK 40;34;01	# block device driver
+CHR 40;34;01 	# character device driver
+
+STICKY_OTHER_WRITABLE 01;40;32 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 07;40;32 # dir that is other-writable (o+w) and not sticky
+# This is for files with execute permission:
+
+EXEC 00;32 
+
+# List any file extensions like '.gz' or '.tar' that you would like ls
+# to colorize below. Put the extension, a space, and the color init string.
+# (and any comments you want to add after a '#')
+.tar 07;40;90 # archives or compressed (bright red)
+.tgz 07;40;90
+.arj 07;40;90
+.taz 07;40;90
+.lzh 07;40;90
+.zip 07;40;90
+.z   07;40;90
+.Z   07;40;90
+.gz  07;40;90
+.jpg 00;35 # Mit Medienplayern zu öffnende Dateien
+.gif 00;35
+.png 00;35
+.bmp 00;35
+.xbm 00;35
+.xcf 00;35
+.xpm 00;35
+.tif 00;35
+.mkv 00;35
+.avi 00;35
+.mp4 00;35
+.svg 00;35
+.mp3 00;35 # audio formats
+.ogg 00;49
+.iso 00;31
+.odt 00;36
+.xls 00;36
+.pdf 00;36
+.epub 00;36
+.docx 00;36
+.html 00;36
+.vim 00;36
+.md  00;37 # document formats
+.txt 00;37
+.log 00;37
+.pandoc 00;37
+.py  00;32
+.hs  00;32
+.php 00;32
