@@ -1,0 +1,39 @@
+interval=5
+signal=10
+separator=false
+separator_block_width=25
+
+# [calender]
+# label= 
+# command=/home/cutuchiqueno/.local/bin/i3blocks/calender
+# interval=30
+
+[task]
+label=
+command=/home/cutuchiqueno/.local/bin/i3blocks/activetw
+interval=30
+
+[music]
+label= 
+command=/home/cutuchiqueno/.local/bin/i3blocks/music
+
+[datetime]
+label=
+# command=date +'%a, %d. %b %Y - %H:%M'
+command=date +'%a, %d. %b %Y'
+interval=15
+
+[battery]
+label=
+command=/home/cutuchiqueno/.local/bin/i3blocks/battery
+
+[wifi]
+label=
+command=/home/cutuchiqueno/.local/bin/i3blocks/wifi
+
+[disk]
+label=
+command=/home/cutuchiqueno/.local/bin/i3blocks/disk
+
+# [email]
+# command=/home/cutuchiqueno/.local/bin/i3blocks/email
